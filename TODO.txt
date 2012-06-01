@@ -1,0 +1,73 @@
+---------------------------------ENH--------------------------------------------
+Remove second IMDB module
+Unit tests
+Automatic movie download
+Handle SAB priority
+
+---------------------------------BUGS-------------------------------------------
+Object reference not set to an instance of an object.
+  at NzbSearcher.frmAddNZB.EnableControls(Boolean bDownloading)
+  at NzbSearcher.frmAddNZB.cmdOK_Click(Object sender, EventArgs e)
+  at System.Windows.Forms.Control.OnClick(EventArgs e)
+  at System.Windows.Forms.Button.OnMouseUp(MouseEventArgs mevent)
+  at System.Windows.Forms.Control.WmMouseUp(Message& m, MouseButtons button, Int32 clicks)
+  at System.Windows.Forms.Control.WndProc(Message& m)
+  at System.Windows.Forms.ButtonBase.WndProc(Message& m)
+  at System.Windows.Forms.Button.WndProc(Message& m)
+  at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+  at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, IntPtr wparam, IntPtr lparam)
+
+Cannot access a disposed object. 
+Object name: 'frmMain'. 
+   at System.Windows.Forms.Control.MarshaledInvoke(Control caller, Delegate method, Object[] args, Boolean synchronous) 
+   at System.Windows.Forms.Control.Invoke(Delegate method, Object[] args) 
+   at NzbSearcher.Global.InvokeOnGUI(Delegate method, Object[] args) in D:\NotBackedUp\SRC\others\nzbsearcher\trunk\App_Code\Global.cs:line 207
+   at NzbSearcher.SearchProviderBase.FireResultsUpdated(UpdateReason Reason, String ErrorMessage) in D:\NotBackedUp\SRC\others\nzbsearcher\trunk\App_Code\SearchProviderBase.cs:line 136
+   at NzbSearcher.UsenetServer.Search(UpdateReason Reason) in D:\NotBackedUp\SRC\others\nzbsearcher\trunk\SearchProviders\UsenetServer.cs:line 183
+   at NzbSearcher.UsenetServer.Search(Object bNextPage) in D:\NotBackedUp\SRC\others\nzbsearcher\trunk\SearchProviders\UsenetServer.cs:line 141
+   at NzbSearcher.SearchProviderBase.Search_Synchronous() in D:\NotBackedUp\SRC\others\nzbsearcher\trunk\App_Code\SearchProviderBase.cs:line 92
+   at NzbSearcher.Collective.Search_Synchronous() in D:\NotBackedUp\SRC\others\nzbsearcher\trunk\SearchProviders\Collective.cs:line 116
+   at NzbSearcher.AutoEpisodeDownloader.prov_SearchResultsUpdated(ISearchProvider provider, UpdateReason Reason, String ErrorMessage) in D:\NotBackedUp\SRC\others\nzbsearcher\trunk\App_Code\AutoEpisodeDownloader.cs:line 382
+   at NzbSearcher.Collective.Sear...
+
+Object reference not set to an instance of an object.
+   at NzbSearcher.Collective.AddNzbItemToResult(NzbItem item)
+   at NzbSearcher.Collective.AddResultsFromProvider(ISearchProvider prov)
+   at NzbSearcher.Collective.prov_SearchResultsUpdated(ISearchProvider prov=der, UpdateReason Reason, String ErrorMessage)
+   at NzbSearcher.SearchProviderBase.FireResultsUpdated(UpdateReason Reason= String ErrorMessage)
+   at NzbSearcher.YabSearch.DoSearch(UpdateReason Reason)
+   at NzbSearcher.Collective.SetSorting(SortColumn col)
+   at NzbSearcher.SearchControl.NzbResultList_ColumnClick(Object sender, Co=umnClickEventArgs e)
+   at System.Windows.Forms.ListView.WmNotify(Message& m)
+   at System.Windows.Forms.ListView.WndProc(Message& m)
+   at System.Windows.Forms.Control.ControlNativeWindow.WndProc(Message& m)
+   at System.Windows.Forms.NativeWindow.Callback(IntPtr hWnd, Int32 msg, In=Ptr wparam, IntPtr lparam)
+
+Object reference not set to an instance of an object.
+   at NzbSearcher.SingleApplication.PipeThread()
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionCont=xt, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart()
+
+
+==========================3D=========================3D=====================
+
+Input string was not in a correct format.
+   at System.Number.StringToNumber(String str, NumberStyles options, Number=uffer& number, NumberFormatInfo info, Boolean parseDecimal)
+   at System.Number.ParseDouble(String value, NumberStyles options, NumberF=rmatInfo numfmt)
+   at System.Double.Parse(String s, NumberStyles style, NumberFormatInfo in=o)
+   at NzbSearcher.Collective.ParseDouble(String s)
+   at NzbSearcher.Collective.GetItemAgeInMinutes(NzbItem item)
+   at NzbSearcher.Collective.AddNzbItemToResult(NzbItem item)
+   at NzbSearcher.Collective.AddResultsFromProvider(ISearchProvider prov)
+   at NzbSearcher.Collective.prov_SearchResultsUpdated(ISearchProvider prov=der, UpdateReason Reason, String ErrorMessage)
+
+==========================3D=========================3D=====================
+
+Exception has been thrown by the target of an invocation.
+   at NzbSearcher.Global.InvokeOnGUI(Delegate method, Object[] args)
+   at NzbSearcher.SearchProviderBase.FireResultsUpdated(UpdateReason Reason= String ErrorMessage)
+   at NzbSearcher.NzbIndex.Search(Object bNextPage)
+   at System.Threading.ThreadHelper.ThreadStart_Context(Object state)
+   at System.Threading.ExecutionContext.Run(ExecutionContext executionConte=t, ContextCallback callback, Object state)
+   at System.Threading.ThreadHelper.ThreadStart(Object obj)
+
